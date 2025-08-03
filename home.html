@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crave Corner - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="Crave Corner Logo" class="logo">
+      <span class="brand-name">Crave Corner</span>
+    </div>
+    <nav class="top-nav">
+  <a href="home.html" class="active">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="help.html">Help & Feedback</a>
+  <a href="about.html">About Us</a>
+
+</nav>
+
+    <div class="user-section">
+      <button id="logoutBtn" class="logout">Logout</button>
+    </div>
+  </header>
+
+  <!-- Animated Food Background -->
+  <section class="home-animation">
+    <div class="floating-food" style="top:10%; left:5%;"><img src="food1.png" onerror="this.outerHTML='🍛';"></div>
+    <div class="floating-food" style="top:60%; left:55%;"><img src="food2.png" onerror="this.outerHTML='🍲';"></div>
+    <div class="floating-food" style="top:70%; left:20%;"><img src="food3.png" onerror="this.outerHTML='🥘';"></div>
+    <div class="floating-food" style="top:10%; left:75%;"><img src="food4.png" onerror="this.outerHTML='🍽️';"></div>
+    <h1 class="home-title">Welcome to Crave Corner</h1>
+    <p class="home-subtitle">Hii!! Satisfy your cravings here.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Crave Corner. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const username = localStorage.getItem("username");
+    if (!username) {
+      window.location.href = "index.html"; 
+    }
+    document.getElementById("welcomeUser").innerText = "Welcome, " + username;
+    document.getElementById("userName").innerText = username;
+
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      localStorage.removeItem("username");
+      localStorage.removeItem("password");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

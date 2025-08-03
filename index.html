@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crave Corner - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="Crave Corner" class="logo">
+      <span class="brand-name">Crave Corner</span>
+    </div>
+  </header>
+
+  <div class="login-container">
+    <h2>Welcome to Crave Corner</h2>
+    <div class="tabs">
+      <button id="signInTab" class="active">Sign In</button>
+      <button id="signUpTab">Sign Up</button>
+    </div>
+
+    <!-- Sign In Form -->
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Sign In</button>
+    </form>
+
+    <!-- Sign Up Form -->
+    <form id="signupForm" style="display:none;">
+      <input type="text" id="newUsername" placeholder="New Username" required>
+      <input type="password" id="newPassword" placeholder="New Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Crave Corner. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
